@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1> {% block title %}New Vidoe{% endblock %} </h1>
+{% endblock %}
+
+{% block content %}
+<form method="POST"  enctype="multipart/form-data">
+    <label for="title">Title</label>
+    <input name="title" id="title" required>
+    <label for="file">File</label>
+    <input type="file" id="file" name="file">
+    <input type="submit" value="upload">
+</form>
+{% endblock %}
